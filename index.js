@@ -300,3 +300,83 @@
 //     console.log(x);
 //     console.log(y);
 // })();
+
+
+// var b = 10;
+// (function b(b) {
+//     b.b = 20;
+//     console.log(b);
+// })(b);
+
+// let arr = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10, [11, [12, 13]]]
+
+// const flatten = function(arr) {
+//     while (arr.some(item => Array.isArray(item))) {
+//         arr = [].concat(...arr)
+//         console.log(arr)
+//     }
+//     return arr
+// }
+
+// console.log(flatten(arr))
+
+// var a = {
+//     i: 1,
+//     toString() {
+//         return a.i++;
+//     }
+// }
+
+// if (a == 1 && a == 2 && a == 3) {
+//     console.log(1);
+// }
+
+// var a = 10;
+// (function() {
+//     console.log(a)
+//     a = 5
+//     console.log(window.a)
+//     var a = 20;
+//     console.log(a)
+// })()
+
+// var obj = {
+//     '2': 3,
+//     '3': 4,
+//     'length': 2,
+//     'splice': Array.prototype.splice,
+//     'push': Array.prototype.push
+// }
+// obj.push(1)
+// obj.push(2)
+// console.log(obj)
+
+// var a = { n: 1 };
+// var b = a;
+// a.x = a = { n: 2 };
+
+// console.log(a.x)
+// console.log(b.x)
+
+// let nums1 = [1, 2, 2, 1, 3]
+// let nums2 = [1, 2]
+// let map = new Map()
+// nums1.forEach(item => {
+//     map.set(item, 0)
+// });
+// nums2.forEach(item => {
+//     map.set(item, map.get(item) + 1)
+// })
+// console.log(map)
+
+const isUrl = urlStr => {
+    try {
+        const { href, origin, host, hostname, pathname } = new URL(urlStr)
+        console.log(href, ' ', origin, ' ', host, ' ', hostname, ' ', pathname)
+        console.log(new URL(urlStr))
+        return href && origin && host && hostname && pathname && true
+    } catch (e) {
+        return false
+    }
+}
+isUrl('http://baidu.com:8080/hello?name=ben&age=15')
