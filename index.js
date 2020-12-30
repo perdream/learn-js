@@ -369,14 +369,26 @@
 // })
 // console.log(map)
 
-const isUrl = urlStr => {
-    try {
-        const { href, origin, host, hostname, pathname } = new URL(urlStr)
-        console.log(href, ' ', origin, ' ', host, ' ', hostname, ' ', pathname)
-        console.log(new URL(urlStr))
-        return href && origin && host && hostname && pathname && true
-    } catch (e) {
-        return false
-    }
-}
-isUrl('http://baidu.com:8080/hello?name=ben&age=15')
+// const isUrl = urlStr => {
+//     try {
+//         const { href, origin, host, hostname, pathname } = new URL(urlStr)
+//         console.log(href, ' ', origin, ' ', host, ' ', hostname, ' ', pathname)
+//         console.log(new URL(urlStr))
+//         return href && origin && host && hostname && pathname && true
+//     } catch (e) {
+//         return false
+//     }
+// }
+// isUrl('http://baidu.com:8080/hello?name=ben&age=15')
+
+// length 的值是指函数的第一个具有默认值的形参之前的形参的个数
+// function test(a, b = 1, c = 3) { //此时length = 1
+//     console.log(a, b, c);
+//     //arguments 为类数组，存储实参
+//     console.log(arguments[0])
+// }
+// console.log(Reflect.getOwnPropertyDescriptor(test, 'length'))
+// console.log(test.length = 3)
+// console.log(Reflect.getOwnPropertyDescriptor(test, 'length'))
+// let obj = { a: 1 }
+// test()
